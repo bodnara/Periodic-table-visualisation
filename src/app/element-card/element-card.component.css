@@ -7,8 +7,7 @@
   cursor: pointer;
 
   transition: transform 200ms ease;
-  opacity: 35%;
-  z-index: 1000;
+  opacity: 0.35;
 
   user-select: none;
   -moz-user-select: none;
@@ -16,7 +15,7 @@
 }
 
 .select {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .select:hover, .base:hover {
