@@ -1,0 +1,31 @@
+<div class="container">
+  <button class="refresh" (click)="resetSelection()">
+    <i class="material-icons">refresh</i>
+  </button>
+  <div class="columns">
+    <button (click)="select(col, 'group')" class="index" *ngFor="let col of columns">
+      {{col}}
+    </button>
+  </div>
+  <div class="rows">
+    <button class="index" (click)="select(row, 'period')" *ngFor="let row of rows">
+      {{row}}
+    </button>
+  </div>
+  <div class="base-elements">
+    <app-element-card
+      *ngFor="let elem of baseElements"
+      (click)="selectElements([elem])"
+      [element]="elem"
+      [selected]="selection.isSelected(elem)">
+    </app-element-card>
+  </div>
+</div>
+<div class="separated-elements">
+  <app-element-card
+    *ngFor="let elem of separatedElements"
+    (click)="selectElements([elem])"
+    [element]="elem"
+    [selected]="selection.isSelected(elem)">
+  </app-element-card>
+</div>

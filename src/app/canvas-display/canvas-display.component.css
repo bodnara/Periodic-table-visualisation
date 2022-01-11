@@ -1,0 +1,20 @@
+.canvas-margin {
+  margin-top: 80px;
+}
+
+.filters {
+  margin-left: 5px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 80vw;
+}
+
+.filters select {
+  margin-right: 30px;
+}
+
+select {
+  min-width: 150px;
+}

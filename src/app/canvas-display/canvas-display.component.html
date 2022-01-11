@@ -1,0 +1,35 @@
+<div class="canvas-margin">
+  <div class="filters">
+    <select [(ngModel)]="selectedType" (change)="changeCharType()">
+      <option *ngFor="let opt of chartTypes" [value]="opt">{{opt | parseElementVar}}</option>
+    </select>
+  </div>
+
+  <canvas
+    *ngIf="selectedType === 'bar'"
+    baseChart
+    [datasets]="data"
+    [options]="chartOptions"
+    [chartType]="'bar'"
+    [legend]="true"
+    [labels]="labels">
+  </canvas>
+  <canvas
+    *ngIf="selectedType === 'line'"
+    baseChart
+    [datasets]="data"
+    [options]="chartOptions"
+    [chartType]="'line'"
+    [legend]="true"
+    [labels]="labels">
+  </canvas>
+  <canvas
+    *ngIf="selectedType === 'doughnut'"
+    baseChart
+    [datasets]="data"
+    [options]="chartOptions"
+    [chartType]="'doughnut'"
+    [legend]="true"
+    [labels]="labels">
+  </canvas>
+</div>

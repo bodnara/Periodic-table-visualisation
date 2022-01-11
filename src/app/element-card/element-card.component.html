@@ -1,0 +1,6 @@
+<div *ngIf="element" [ngClass]="[element?.groupBlock, selected ? 'select' : 'base']">
+  <div *ngIf="element.atomicNumber > 0" class="number">{{element.atomicNumber}}</div>
+  <div class="symbol">{{element.symbol}}</div>
+  <div class="name">{{element.name}}</div>
+  <div class="mass">{{element.atomicMass}}</div>
+</div>
