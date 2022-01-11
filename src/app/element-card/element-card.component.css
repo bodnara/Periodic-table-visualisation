@@ -8,6 +8,7 @@
 
   transition: transform 200ms ease;
   opacity: 35%;
+  z-index: 1000;
 
   user-select: none;
   -moz-user-select: none;
